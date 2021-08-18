@@ -3,7 +3,7 @@ name: first-github-action
 on: [push, pull_request]
 
 jobs:
-  run-some-shell-commands:
+  run-shell-commands:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
