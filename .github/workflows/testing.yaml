@@ -1,0 +1,18 @@
+
+name: testing some functionalities of github actions
+
+on: push
+
+jobs:
+  to-test-github-action-functionality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step one - success scenario
+        run: echo "step one - success scenario"
+      - name: The job has succeeded
+        if: ${{ success() }}
+        run: echo "job has succeeded"
+      - name: The job has failed
+        if: ${{ failure() }}
+        run: echo "job has failed"
+      
