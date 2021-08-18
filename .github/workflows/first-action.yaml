@@ -1,26 +1,26 @@
-name: first-github-action
+# name: first-github-action
 
-on: [push]
+# on: [push]
 
-jobs:
-  run-shell-commands:
-    runs-on: ubuntu-latest
-    steps:
-      - name: echo a string
-        run: echo Hello Searching...
-      - name: multiple commands
-        run: |
-          npm -v
-          node -v
-      - name: python script
-        run: |
-          import platform
-          print (platform.processor())
-        shell: python
-      # - name: Send GitHub Action trigger data to Slack workflow
-      #   id: slack
-      #   uses: slackapi/slack-github-action@v1.14.0
-      #   env:
-      #     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-      #   with:
-      #     payload: "{\"status\":\"workflow executed successfully\"}"
+# jobs:
+#   run-shell-commands:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: echo a string
+#         run: echo Hello Searching...
+#       - name: multiple commands
+#         run: |
+#           npm -v
+#           node -v
+#       - name: python script
+#         run: |
+#           import platform
+#           print (platform.processor())
+#         shell: python
+#       - name: Send GitHub Action trigger data to Slack workflow
+#         id: slack
+#         uses: slackapi/slack-github-action@v1.14.0
+#         env:
+#           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+#         with:
+#           payload: "{\"status\":\"workflow executed successfully\"}"

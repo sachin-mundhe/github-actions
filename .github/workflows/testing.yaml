@@ -7,12 +7,17 @@ jobs:
   to-test-github-action-functionality:
     runs-on: ubuntu-latest
     steps:
-      - name: step one - success scenario
-        run: echo "step one - success scenario"
+      - name: step1 - failed
+        run: eccho "failed to run command"
+      - name: step2 - wil be skipped because of failure in step1
+        run: echo "wil be skipped because of failure in step1"
       - name: The job has succeeded
         if: ${{ success() }}
         run: echo "job has succeeded"
       - name: The job has failed
         if: ${{ failure() }}
         run: echo "job has failed"
+
+# This is success scenario
+
       
