@@ -1,10 +1,10 @@
 name: first-github-action
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
-  run-some-shell-commands:
-    runs-on: ubuntu-18.04
+  run-shell-commands:
+    runs-on: ubuntu-latest
     steps:
       - name: echo a string
         run: echo Hello Searching...
